@@ -53,7 +53,7 @@ For analysis, we combined `Review Title + Comments` into a single feedback text.
 
 ### ▶️ Option 1: Google Colab + ngrok
 1. Open `Redmi6_Sentiment_Analysis_App.ipynb` in Colab
-2. Upload `redmi6.csv`
+2. Upload `redmi6.csv and app.py`
 3. Add your [ngrok authtoken](https://dashboard.ngrok.com/)
 4. App will generate a public link like `https://<your-app>.ngrok.io`
 
