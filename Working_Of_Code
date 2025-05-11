@@ -1,0 +1,30 @@
+This Streamlit app:
+
+Loads Redmi 6 customer reviews from a CSV file.
+Uses a pretrained DistilBERT model to classify each review as Positive or Negative.
+Displays the results using:
+A pie chart (to show sentiment distribution)
+A word cloud (to show most common review words)
+A table (with each review and its predicted sentiment)
+
+| Section                 | What it does                                                                                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `import ...`            | Loads required libraries: Streamlit, pandas, transformers (BERT), matplotlib, etc.                                                                                      |
+| `load_model()`          | Loads the DistilBERT tokenizer and model for sentiment classification.                                                                                                  |
+| `st.title(...)`         | Displays the app title at the top of the web interface.                                                                                                                 |
+| `load_data()`           | Loads the `redmi6.csv` file and combines review title + comments into a single text field.                                                                              |
+| `predict_sentiment()`   | Uses DistilBERT to classify a review as positive (1) or negative (0).                                                                                                   |
+| `df['sentiment'] = ...` | Applies the model to all reviews in the dataset.                                                                                                                        |
+| `df['sentiment_label']` | Converts the numeric labels into readable text ("Positive"/"Negative").                                                                                                 |
+| `st.subheader(...)`     | Adds section headings and visualizes results using: <br> - a **pie chart** of sentiments <br> - a **word cloud** of common words <br> - a **table** of labeled feedback |
+
+✅ Example Outputs
+Pie Chart: "72% Positive, 28% Negative"
+
+Word Cloud: Big words like “camera”, “battery”, “bad”, “great”
+
+| Review Title | Comments                 | Sentiment |
+| ------------ | ------------------------ | --------- |
+| Great phone! | Battery life is amazing. | Positive  |
+
+
